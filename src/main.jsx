@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {HashRouter, Routes, Route} from 'react-router-dom'
 
 import Home from './pages/Home'
 import Movie from './pages/Movie'
@@ -11,7 +11,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<App />}>
           <Route path='/' element={<Home />}/>
@@ -19,6 +19,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/search' element={<Search />}/>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )
